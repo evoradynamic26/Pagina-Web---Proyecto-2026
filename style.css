@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playwrite+NO:wght@100..400&display=swap');
+
+body {
+  background-color: rgba(65, 4, 179, 0.884);
+}
+
+.contenedor{
+  display: flex;
+}
+
+.textos {
+    align-self: center;
+    padding: 20px;
+}
+
+div {
+  margin-left: 18px;
+}
+
+button {
+    background-color: rgba(250, 37, 37, 0.534);
+    padding: 15px;
+}
+
+.titulo-principal {
+    padding: 0px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 100px;
+}
+
+/* Contenedor de las 4 tarjetas */
+.galeria-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+/* La Tarjeta (Círculo) */
+.tarjeta-circular {
+    width: 265px; 
+    height: 275px;
+    background: #a3406179;
+    border-radius: 800px; 
+    overflow: visible; 
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    box-shadow: 0 9px 20px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen siempre */
+    position: normal;
+}
+
+/* Contenedor interno */
+.contenido-interno {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start; 
+    width: 400px;
+    height: 240px;
+    /* Evitamos que el padding afecte el centrado inicial */
+    padding: 0; 
+}
+
+/* La Imagen */
+.tarjeta-circular img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0; 
+    /* Transición para el cambio de escala si lo deseas */
+    transition: transform 0.5s ease;
+}
+
+/* Texto: Oculto a la derecha */
+.texto-descripcion {
+    padding: 200px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    /* Evita que el texto ocupe espacio cuando está cerrado */
+    visibility: hidden; 
+}
+
+/* --- ESTADO ABIERTO --- */
+.tarjeta-circular.abierta {
+    width: 500px; 
+    border-radius: 80px; 
+}
+
+.tarjeta-circular.abierta .texto-descripcion {
+    opacity: 1;
+    visibility: visible;
+    white-space: normal;
+    padding: 1px;
+    text-align: left;           
+    align-items: normal;      
+    
+}
+/* Opcional: un pequeño efecto en la imagen al abrir */
+.tarjeta-circular.abierta img {
+    transform: scale(0.95); /* Hace que se vea un poco de aire alrededor al abrir */
+}

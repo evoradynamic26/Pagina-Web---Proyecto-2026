@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDIEGA - Online Gaming Site</title>
+    <link rel="Stylesheet" href="Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- ============================================
+         NAVBAR
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-content">
+            <a href="#home" class="logo">
+                <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+                    <polygon points="16,2 30,10 30,22 16,30 2,22 2,10" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                    <polygon points="13,10 23,16 13,22" fill="#00d4ff"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-brand">INDIEGA</span>
+                    <span class="logo-subtitle">Gaming Solutions</span>
+                </div>
+            </a>
+
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Homepage</a>
+                <a href="#" class="nav-link">Pages</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#games" class="nav-link">Games</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contacts" class="nav-link">Contacts</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="search-btn" title="Buscar">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="btn-gaming">Join Us Now</button>
+                <button class="menu-toggle" id="menuToggle" title="Menú">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <a href="#home" class="mobile-menu-link">Homepage</a>
+                <a href="#" class="mobile-menu-link">Pages</a>
+                <a href="#gallery" class="mobile-menu-link">Gallery</a>
+                <a href="#games" class="mobile-menu-link">Games</a>
+                <a href="#blog" class="mobile-menu-link">Blog</a>
+                <a href="#contacts" class="mobile-menu-link">Contacts</a>
+                <button class="btn-gaming" style="width: 100%; margin-top: 0.5rem;">Join Us Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-label">Welcome to GamesPlay</p>
+            <h1 class="hero-title">ONLINE GAMING SITE</h1>
+            <p class="hero-description">
+                Descubre los mejores juegos, únete a la comunidad más grande de gaming y vive experiencias épicas. Tu aventura digital comienza aquí con INDIEGA Gaming Solutions.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-gaming-solid" onclick="document.getElementById('games').scrollIntoView({behavior: 'smooth'})">More About Us</button>
+                <button class="btn-gaming" onclick="document.getElementById('blog').scrollIntoView({behavior: 'smooth'})">Latest News</button>
+            </div>
+        </div>
+
+        <!-- Social icons (desktop only) -->
+        <div class="hero-social-icons" style="position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 0.75rem; z-index: 10;">
+            <button style="width: 2rem; height: 2rem; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); color: rgba(224,224,224,1); cursor: pointer; font-family: 'Exo 2', sans-serif; font-weight: 700;">f</button>
+            <button style="width: 2rem; height: 2rem; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); color: rgba(224,224,224,1); cursor: pointer; font-family: 'Exo 2', sans-serif; font-weight: 700;">t</button>
+            <button style="width: 2rem; height: 2rem; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); color: rgba(224,224,224,1); cursor: pointer; font-family: 'Exo 2', sans-serif; font-weight: 700;">g+</button>
+        </div>
+
+        <!-- Scroll indicator -->
+        <button class="hero-scroll" onclick="document.getElementById('games').scrollIntoView({behavior: 'smooth'})">
+            <span class="scroll-label">Scroll</span>
+            <svg class="scroll-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+    </section>
+
+    <!-- ============================================
+         STATS SECTION
+         ============================================ -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-value" data-count="50000">0</div>
+                    <div class="stat-label">Jugadores Activos</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="6" y1="9" x2="6" y2="20"></line>
+                            <line x1="10" y1="9" x2="10" y2="20"></line>
+                            <line x1="14" y1="9" x2="14" y2="20"></line>
+                            <line x1="18" y1="9" x2="18" y2="20"></line>
+                            <path d="M4 9h16V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v4z"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-value" data-count="1200">0</div>
+                    <div class="stat-label">Juegos Disponibles</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="stat-value" data-count="350">0</div>
+                    <div class="stat-label">Torneos Realizados</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="stat-value" data-count="98">0</div>
+                    <div class="stat-label">Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         UPCOMING GAMES SECTION
+         ============================================ -->
+    <section class="games-section" id="games">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Upcoming Games:</p>
+                <h2 class="section-title">Upcoming Games:</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="games-carousel">
+                <div class="game-card">
+                    <div class="game-circle">
+                        <img src="Emiliano.jpeg" alt="FIFAL 2018">
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title">FIFAL 2018</div>
+                        <div class="game-date">MAR 18-20, 2018</div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-circle">
+                        <img src="Zoe.jpeg" alt="MIX COMBINATION">
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title">MIX COMBINATION</div>
+                        <div class="game-date">APR 26-27, 2018</div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-circle">
+                        <img src="Vicky.jpeg" alt="FORZA JACSON">
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title">FORZA JACSON</div>
+                        <div class="game-date">MAR 11, 2019</div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-circle">
+                        <img src="Milena.jpeg" alt="NO MAN'S SKY">
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title">NO MAN'S SKY</div>
+                        <div class="game-date">SEPT 13, 2019</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         GALLERY SECTION
+         ============================================ -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Visual Showcase</p>
+                <h2 class="section-title">Game Gallery</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663700891269/dmwCE3kLKHM7hMLUo2SNt4/hero-gaming-bg-jr9NrYssYtFWR7VLtwVqLR.webp" alt="Epic Arena">
+                    <div class="gallery-overlay">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <span class="gallery-title">Epic Arena</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663700891269/dmwCE3kLKHM7hMLUo2SNt4/game-1-fifal-4pYrfbudWQqsXYP3TQs9eG.webp" alt="Alien Worlds">
+                    <div class="gallery-overlay">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <span class="gallery-title">Alien Worlds</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663700891269/dmwCE3kLKHM7hMLUo2SNt4/game-2-mix-c2j5cE64svgunqPbCN6diG.webp" alt="Cyber Race">
+                    <div class="gallery-overlay">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <span class="gallery-title">Cyber Race</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663700891269/dmwCE3kLKHM7hMLUo2SNt4/game-3-forza-DLq77SA7RTsXVzuGeWvbDe.webp" alt="Enchanted Forest">
+                    <div class="gallery-overlay">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <span class="gallery-title">Enchanted Forest</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663700891269/dmwCE3kLKHM7hMLUo2SNt4/game-4-nomans-isDgfij66Bdv32nWpNtDrG.webp" alt="Deep Space">
+                    <div class="gallery-overlay">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <span class="gallery-title">Deep Space</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         BLOG SECTION
+         ============================================ -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Latest Updates</p>
+                <h2 class="section-title">Gaming News &amp; Blog</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Featured Post -->
+            <div class="featured-post">
+                <div class="featured-content">
+                    <div class="post-tags">
+                        <span class="tag-badge tag-new">New</span>
+                        <span class="tag-badge tag-games">Games</span>
+                        <span class="tag-badge tag-action">Action</span>
+                        <span class="post-date">APR 23-27, 2018</span>
+                    </div>
+                    <h3 class="post-title">FIFAL 2018</h3>
+                    <p class="post-excerpt">
+                        Andouille frankfurter hamburger, swine leberkas landjaeger cupim. Ground round ball-tip pastrami, turducken chicken porchetta fatback frankfurter. Pig kielbasa pork chop.
+                    </p>
+                    <p class="post-body">
+                        Steak sausage pork loin bacon tri-tip meatball shoulder cupim beef pork chop kevin boudin. Short loin pig meatball ham landjaeger pastrami. Drumstick ham hock chuck pork belly chicken prosciutto shilling salami ham pancetta.
+                    </p>
+                    <div class="post-footer">
+                        <button class="btn-gaming">Read More</button>
+                        <div class="star-rating">
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                            <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663700891269/dmwCE3kLKHM7hMLUo2SNt4/game-2-mix-c2j5cE64svgunqPbCN6diG.webp" alt="FIFAL 2018" class="featured-image">
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663700891269/dmwCE3kLKHM7hMLUo2SNt4/game-3-forza-DLq77SA7RTsXVzuGeWvbDe.webp" alt="FORZA JACSON" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <div class="post-tags" style="margin-bottom: 0.75rem;">
+                            <span class="tag-badge tag-games">Games</span>
+                            <span class="tag-badge tag-action">RPG</span>
+                        </div>
+                        <div class="blog-card-header">
+                            <h3 class="blog-card-title">FORZA JACSON</h3>
+                            <span class="blog-card-date">MAR 11, 2019</span>
+                        </div>
+                        <p class="blog-card-excerpt">
+                            Explore the mystical realms of Forza Jacson, where ancient magic meets modern technology. A groundbreaking RPG experience.
+                        </p>
+                        <div class="blog-card-footer">
+                            <button class="read-more-link">Read More →</button>
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                                <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                                <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                                <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                                <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663700891269/dmwCE3kLKHM7hMLUo2SNt4/game-4-nomans-isDgfij66Bdv32nWpNtDrG.webp" alt="NO MAN'S SKY" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <div class="post-tags" style="margin-bottom: 0.75rem;">
+                            <span class="tag-badge tag-action">Sci-Fi</span>
+                            <span class="tag-badge tag-action">Exploration</span>
+                        </div>
+                        <div class="blog-card-header">
+                            <h3 class="blog-card-title">NO MAN'S SKY</h3>
+                            <span class="blog-card-date">SEPT 13, 2019</span>
+                        </div>
+                        <p class="blog-card-excerpt">
+                            Journey through an infinite universe filled with alien worlds, exotic creatures, and untold mysteries. Every planet tells a story.
+                        </p>
+                        <div class="blog-card-footer">
+                            <button class="read-more-link">Read More →</button>
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                                <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                                <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                                <svg class="star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.70 20.27 25 12 19.54 3.73 25 6.82 16.70 0 10.27 8.91 10.26 12 2"></polygon></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-gaming view-all-btn">View All Articles</button>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <!-- Brand column -->
+                    <div>
+                        <div class="footer-brand">
+                            <svg class="footer-brand-icon" viewBox="0 0 32 32" fill="none">
+                                <polygon points="16,2 30,10 30,22 16,30 2,22 2,10" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                                <polygon points="13,10 23,16 13,22" fill="#00d4ff"/>
+                            </svg>
+                            <div class="footer-brand-text">
+                                <span class="footer-brand-name">INDIEGA</span>
+                                <span class="footer-brand-subtitle">Gaming Solutions</span>
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            La plataforma de gaming más completa del mundo. Descubre juegos épicos, únete a torneos y conecta con millones de jugadores.
+                        </p>
+                        <div class="footer-contact">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span class="contact-text">Gaming District, Cyber City 2050</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span class="contact-text">+1 (800) INDIEGA</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                                <span class="contact-text">hello@indiega.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Homepage</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Games Library</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Tournaments</a></li>
+                            <li><a href="#">Leaderboard</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div>
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Games -->
+                    <div>
+                        <h4>Games</h4>
+                        <ul>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">RPG</a></li>
+                            <li><a href="#">Strategy</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Racing</a></li>
+                            <li><a href="#">Indie</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <div class="newsletter-text">
+                        <h4>Stay in the Game</h4>
+                        <p>Suscríbete para recibir las últimas noticias y lanzamientos</p>
+                    </div>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Suscripción exitosa!'); this.reset();">
+                        <input type="email" class="newsletter-input" placeholder="tu@email.com" required>
+                        <button type="submit" class="newsletter-submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 INDIEGA Gaming Solutions. Todos los derechos reservados.</p>
+                <div class="footer-socials">
+                    <button class="social-btn" title="Facebook">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </button>
+                    <button class="social-btn" title="Twitter">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="social-btn" title="YouTube">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.54c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </button>
+                    <button class="social-btn" title="Twitch">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 2H3v18h5v4l4-4h5l7-7V2zm-7 13h-2v-5h2v5zm5 0h-2v-5h2v5z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-menu-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Animate stat counters
+        const statValues = document.querySelectorAll('[data-count]');
+        let hasAnimated = false;
+
+        function animateCounters() {
+            if (hasAnimated) return;
+            hasAnimated = true;
+
+            statValues.forEach(el => {
+                const target = parseInt(el.getAttribute('data-count'));
+                const duration = 2000;
+                const start = Date.now();
+
+                function update() {
+                    const now = Date.now();
+                    const progress = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.floor(eased * target);
+                    el.textContent = current.toLocaleString();
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+                update();
+            });
+        }
+
+        // Trigger animation when stats section is visible
+        const statsSection = document.querySelector('.stats-section');
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateCounters();
+                observer.disconnect();
+            }
+        }, { threshold: 0.3 });
+        observer.observe(statsSection);
+
+        // Button click handlers
+        document.querySelectorAll('.btn-gaming, .btn-gaming-solid, .read-more-link, .social-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (!this.href && this.tagName === 'BUTTON') {
+                    e.preventDefault();
+                    alert('Funcionalidad próximamente disponible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

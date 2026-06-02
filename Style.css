@@ -701,18 +701,24 @@
         .gallery-overlay {
             position: absolute;
             inset: 0;
-            background: rgba(9, 13, 18, 0.2);
+            background: transparent; /* mantener transparente para no opacar la imagen */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
-            opacity: 0;
+            /* no usar opacity en el overlay (evita oscurecer la imagen) */
         }
 
-        .gallery-item:hover .gallery-overlay {
-            background: rgba(9, 13, 18, 0.75);
+        /* Mostrar/animar solo el icono (svg) y el título sin cambiar la imagen */
+        .gallery-overlay svg {
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .gallery-item:hover svg {
             opacity: 1;
+            transform: translateY(0);
         }
 
         .gallery-title {

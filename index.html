@@ -500,43 +500,6 @@
             });
         });
 
-        // Animate stat counters
-        const statValues = document.querySelectorAll('[data-count]');
-        let hasAnimated = false;
-
-        function animateCounters() {
-            if (hasAnimated) return;
-            hasAnimated = true;
-
-            statValues.forEach(el => {
-                const target = parseInt(el.getAttribute('data-count'));
-                const duration = 2000;
-                const start = Date.now();
-
-                function update() {
-                    const now = Date.now();
-                    const progress = Math.min((now - start) / duration, 1);
-                    const eased = 1 - Math.pow(1 - progress, 3);
-                    const current = Math.floor(eased * target);
-                    el.textContent = current.toLocaleString();
-
-                    if (progress < 1) {
-                        requestAnimationFrame(update);
-                    }
-                }
-                update();
-            });
-        }
-
-        // Trigger animation when stats section is visible
-        const statsSection = document.querySelector('.stats-section');
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                animateCounters();
-                observer.disconnect();
-            }
-        }, { threshold: 0.3 });
-        observer.observe(statsSection);
 
         // Button click handlers
         document.querySelectorAll('.btn-gaming, .btn-gaming-solid, .read-more-link, .social-btn').forEach(btn => {
